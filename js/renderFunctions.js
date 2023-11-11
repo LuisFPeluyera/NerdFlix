@@ -74,7 +74,7 @@ export const renderMovie = (movie, target) => {
             <div class="title-year">
             <div class=" align-items center">
             <img src="${moviePoster}"  class="poster-img" alt="poster-img">
-             <p class="movie-card-year">${movie.release_date}</p>
+             <p class="movie-card-year">${movie.release_date.slice(0,4)}</p>
             ${movie.overview && `<p class="movie-card-description">${movie.overview}.</p>`}
             </div>
             </div>
