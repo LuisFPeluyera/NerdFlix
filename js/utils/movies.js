@@ -1,4 +1,4 @@
-import {TMDB_API_KEY,OMDB_API_KEY} from "../keys.js";
+import {TMDB_API_KEY,OMDB_API_KEY} from "./keys.js";
 
 // Below functions is for TMDB
 const searchMoviesTMDB = async (query) => {

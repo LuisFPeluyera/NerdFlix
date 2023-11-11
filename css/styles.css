@@ -26,12 +26,9 @@ header.container {
 }
 .logo {
 	font-size: 48px;
-	font-weight: 500;
-}
-
-.logo span {
 	color: red;
 	font-weight: 700;
+	letter-spacing: -0.05em;
 }
 .container.cat-tags {
 	margin: unset !important;
@@ -59,7 +56,7 @@ header.container {
 	transition: 2s;
 }
 .movie-card:hover {
-	transform: scale(1.05);
+	/*transform: scale(1.05);*/
 }
 
 .movie-card-year {
