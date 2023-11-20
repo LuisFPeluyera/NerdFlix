@@ -39,7 +39,7 @@ closeModal.addEventListener("click", () => {
 
 // Close the modal when clicking outside the modal
 window.addEventListener("click", (event) => {
-    if (event.target == addMovieModal) {
+    if (event.target === addMovieModal) {
         addMovieModal.style.display = "none";
     }
 });
@@ -71,7 +71,7 @@ addMovieBtn.addEventListener("click", (e)=>{
     
                 renderMovie(movie, target);
 
-            };
+            }
             modal.remove();
         });
     });
@@ -103,7 +103,13 @@ function findMovie () {
 
     if (searchTerm.length > 0){
         searchList.classList.remove("hide-search-list");
-        getMovieByTitleOMDB(searchTerm);
+        getMovieByTitleOMDB(searchTerm).then(movies => {
+            console.log(movies.Search);
+            movies.Search.map((movie) =>{
+                searchList.appendChild(movie.Poster)
+            })
+        });
+
         
     } else {
         searchList.classList.add("hide-search-list")
@@ -133,7 +139,9 @@ searchInput.addEventListener("keyup",findMovie);
         const target = document.querySelector("#carousel");
         renderPoster(poster, target);
     };
-    
+
+
+
     
 })();
 // poster https://image.tmdb.org/t/p/w500 + poster path
